@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: psergio- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/15 14:43:53 by psergio-          #+#    #+#             */
+/*   Updated: 2021/04/15 14:53:53 by psergio-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 int		ft_strlen(char *str)
@@ -7,30 +19,32 @@ int		ft_strlen(char *str)
 	length = 0;
 	while (*str++)
 		length++;
-	return length;
+	return (length);
 }
 
-int ft_strcmp(char *s1, char *s2)
+int		ft_strcmp(char *s1, char *s2)
 {
 	unsigned char	c1;
 	unsigned char	c2;
-	int	diff;
+	int				diff;
+
 	while (*s1)
 	{
 		c1 = *s1;
 		c2 = *s2;
 		diff = c1 - c2;
 		if (diff != 0)
-			return diff;
+			return (diff);
 		s1++;
 		s2++;
 	}
 	c1 = *s1;
 	c2 = *s2;
 	if (c1 != c2)
-		return *s1 - *s2;
-	return 0;
+		return (*s1 - *s2);
+	return (0);
 }
+
 void	ft_putstr(char *str)
 {
 	unsigned int	length;
@@ -57,12 +71,11 @@ void	sort_str(unsigned int arr_size, char *strings[])
 				strings[j] = tmp;
 			}
 	}
-
 }
 
 int		main(int argc, char *argv[])
 {
-	int		i;
+	int	i;
 
 	if (argc > 1)
 	{
@@ -73,6 +86,5 @@ int		main(int argc, char *argv[])
 			ft_putstr(argv[i]);
 			ft_putstr("\n");
 		}
-
 	}
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: psergio- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/15 14:42:58 by psergio-          #+#    #+#             */
+/*   Updated: 2021/04/15 14:43:11 by psergio-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 int		ft_strlen(char *str)
@@ -7,7 +19,7 @@ int		ft_strlen(char *str)
 	length = 0;
 	while (*str++)
 		length++;
-	return length;
+	return (length);
 }
 
 void	ft_putstr(char *str)
@@ -18,7 +30,7 @@ void	ft_putstr(char *str)
 	write(1, str, length);
 }
 
-int	main(int argc, char *argv[])
+int		main(int argc, char *argv[])
 {
 	int	counter;
 

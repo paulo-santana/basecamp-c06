@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: psergio- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/15 14:43:20 by psergio-          #+#    #+#             */
+/*   Updated: 2021/04/15 14:43:38 by psergio-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 int		ft_strlen(char *str)
@@ -7,7 +19,7 @@ int		ft_strlen(char *str)
 	length = 0;
 	while (*str++)
 		length++;
-	return length;
+	return (length);
 }
 
 void	ft_putstr(char *str)
